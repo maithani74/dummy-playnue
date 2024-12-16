@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { NhostClient } from "@nhost/nhost-js";
-import { useNhostClient } from "@nhost/nextjs";
 import {
   Clock,
   MapPin,
@@ -32,8 +31,6 @@ const TimePicker = ({ value, onChange, label }) => {
   const [hours, setHours] = useState("12");
   const [minutes, setMinutes] = useState("00");
   const [period, setPeriod] = useState("AM");
-  const nhost = useNhostClient();
-
   // const [nhostClient] = useState(() => createNhostClient());
 
   React.useEffect(() => {
